@@ -4,6 +4,7 @@ const allowedOrigins = [
   'http://127.0.0.1:5500',
   'https://9c3f-5-133-120-24.ngrok-free.app',
   'https://e-imzo.toshkentinvest.uz',
+  'e-imzo.toshkentinvest.uz',
 
   'https://smart-agro.uz',
   'https://www.smart-agro.uz',
