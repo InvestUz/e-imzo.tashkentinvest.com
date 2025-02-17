@@ -1,0 +1,1 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0ba88e"],{"382e":function(e,t,n){"use strict";t["a"]={methods:{setTitle(e){document.title=e}}}}}]);

@@ -1,0 +1,221 @@
+<html lang="ru" theme="platon" color="platon">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="favicon.png">
+    <title id="platon-app-title">online-mahalla.uz</title>
+
+    <!-- Preload critical CSS -->
+    <link href="css/app.ca58e585.css" rel="preload" as="style">
+    <link href="css/chunk-vendors.ddf05903.css" rel="preload" as="style">
+    <link href="css/icons.6cf46235.css" rel="preload" as="style">
+
+    <!-- Preload critical JS -->
+    <link href="js/app.cdc9614e.js" rel="preload" as="script">
+    <link href="js/chunk-vendors.b6aef49d.js" rel="preload" as="script">
+    <link href="js/runtime.432eb05a.js" rel="preload" as="script">
+
+    <!-- Styles -->
+    <link href="css/icons.6cf46235.css" rel="stylesheet">
+    <link href="css/chunk-vendors.ddf05903.css" rel="stylesheet">
+    <link href="css/app.ca58e585.css" rel="stylesheet">
+
+    <!-- Analytics -->
+    <script src="media/store/js/analytic_instruments/google-tag-manager-head.js"></script>
+
+    <!-- Add this CSS to your styles -->
+    <style>
+        .vm--overlay {
+            z-index: 9999 !important;
+        }
+
+        .vm--modal {
+            z-index: 10000 !important;
+        }
+
+        .modal-close {
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+            top: 15px;
+        }
+
+        .modal-close i {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="config.js"></script>
+
+    <!-- Main application container -->
+    <div id="app">
+        <div class="onm-login__page">
+            <div class="onm-login">
+                <div class="onm-login__wrapper d-flex justify-content-center">
+                    <div class="onm-login__form--card">
+                        <div class="onm-login__form--login">
+                            <a href="/" class="router-link-active">
+                                <img src="https://03a8-5-133-120-24.ngrok-free.app/media/store/img/header-logo.svg"
+                                    alt="logo">
+                            </a>
+                        </div>
+                        <div class="onm-login__form--header">
+                            <p>Хуш келибсиз</p>
+                            <h3>Тизимга кириш</h3>
+                        </div>
+                        <form class="onm-login__form">
+                            <div class="onm-login__form--item">
+                                <label>Логин</label>
+                                <span>
+                                    <input type="text" placeholder="Киритиш">
+                                </span>
+                            </div>
+                            <div class="onm-login__form--item">
+                                <label>Парол</label>
+                                <span>
+                                    <input placeholder="Парол" type="password">
+                                    <span class="onm-login__eye">
+                                        <img src="https://03a8-5-133-120-24.ngrok-free.app/media/store/img/hide-password.svg"
+                                            alt="online-mahalla">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="onm-login__actions d-flex flex-column align-items-center">
+                                <button type="button"
+                                    class="onm-btn onm-btn--blue onm-btn--r5 onm-btn--w100p d-flex align-items-center my-3">
+                                    <span>Тизимга кириш</span>
+                                </button>
+                                <button type="button"
+                                    class="onm-btn onm-btn--dark-blue onm-btn--r5 onm-btn--w100p d-flex align-items-center"
+                                    onclick="openModal()">
+                                    <span>ЭРИ билан кириш</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="onm-login__banner d-md-flex align-items-center justify-content-center">
+                        <div class="onm-login__banner--logo">
+                            <img src="https://03a8-5-133-120-24.ngrok-free.app/media/store/img/login-white.svg"
+                                alt="online-mahalla">
+                        </div>
+                        <div class="onm-login__links">
+                            <li>
+                                <a href="https://t.me/onlinemahalla">
+                                    <img src="/media/store/img/telegram_black.svg" alt="telegram">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/onlinemahalla">
+                                    <img src="/media/store/img/instagram_black.svg" alt="instagram">
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals container -->
+    <div id="modals-container">
+        <div class="vm--container">
+            <div class="vm--overlay" style="z-index: 9999;">
+                <div class="vm--top-right-slot"></div>
+            </div>
+            <div role="dialog" aria-modal="true" class="vm--modal"
+                style="left: 225px; width: 500px; height: auto; top: 296px; z-index: 10000;">
+                <div class="platon-dialog position-relative">
+                    <div class="pmodal-title d-flex align-items-center modal-form-header">
+                        <div class="flex-grow-1">
+                            <div>Электрон рақамли имзо билан кириш</div>
+                        </div>
+                        <div class="cursor-pointer modal-close">
+                            <i class="fa fa-times-circle"></i>
+                        </div>
+                    </div>
+                    <div class="pmodal-body p-0 overflow-auto">
+                        <div class="p-3">
+                            <div class="alert alert-danger mb-0">Электрон калитлар топилмади</div>
+                        </div>
+                    </div>
+                    <div class="d-flex footer-actions form-modal-footer">
+                        <div class="text-center footer-action disabled" style="width: 50%;">
+                            <div>
+                                <i class="fas fa-key"></i>
+                                <span>Кириш</span>
+                            </div>
+                            <div role="status" class="spinner-border spinner-border-sm text-primary ml-2"
+                                style="display: none;"></div>
+                        </div>
+                        <div class="text-center footer-action" style="width: 50%;">
+                            <div><!---->
+                                <span>Бекор қилиш</span>
+                            </div>
+                            <div role="status" class="spinner-border spinner-border-sm text-primary ml-2"
+                                style="display: none;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/runtime.432eb05a.js"></script>
+    <script src="js/icons.6b59368f.js"></script>
+    <script src="js/chunk-vendors.b6aef49d.js"></script>
+    <script src="js/app.cdc9614e.js"></script>
+    <script src="media/store/js/notification.js?v=0.0.1"></script>
+    <script src="media/store/js/helpers.js"></script>
+
+    <!-- Add this JavaScript -->
+    <script>
+        function openModal() {
+            const modal = document.querySelector('.vm--modal');
+            const container = document.querySelector('.vm--container');
+            modal.style.display = 'block';
+            container.style.display = 'block';
+        }
+
+        // Close modal when clicking on close button
+        document.querySelector('.modal-close').addEventListener('click', function () {
+            const modal = document.querySelector('.vm--modal');
+            const container = document.querySelector('.vm--container');
+            modal.style.display = 'none';
+            container.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        document.querySelector('.vm--container').addEventListener('click', function (e) {
+            if (e.target === this) {
+                const modal = document.querySelector('.vm--modal');
+                const container = document.querySelector('.vm--container');
+                modal.style.display = 'none';
+                container.style.display = 'none';
+            }
+        });
+    </script>
+
+    <!-- Google Analytics -->
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m);
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'G-100DESZ2QC', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

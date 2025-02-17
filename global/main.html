@@ -1,0 +1,2541 @@
+<html lang="ru" theme="platon" color="platon">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="/favicon.png">
+    <style>
+        .preloader {
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100vw;
+            height: 100vh;
+            font-size: 40px;
+            font-family: Arial, serif;
+            background: transparent;
+            color: #56678f;
+        }
+
+        .preloader .app-name {
+            width: 100%;
+            font-weight: bold;
+            text-align: center;
+            margin: 0 auto;
+            top: 40vh;
+            position: absolute;
+        }
+
+        .preloader .spinner::after {
+            content: "";
+            box-sizing: border-box;
+            width: 40px;
+            height: 40px;
+            margin-left: -20px;
+            position: absolute;
+            border-radius: 50%;
+        }
+
+        .preloader .spinner.smooth::after {
+            border-top: 4px solid #56678f;
+            border-left: 4px solid #56678f;
+            border-right: 4px solid rgba(255, 255, 255, 0);
+            animation: spinner 0.6s linear infinite;
+        }
+
+        @keyframes spinner {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    
+    <title id="platon-app-title">online-mahalla.uz</title>
+    <link href="https://online-mahalla.uz/css/chunk-0021f432.3f0e72a1.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-0a339c19.4c68e601.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-156973d2.ea9bb4d8.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-173871af.d86ad5c4.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-235fbe0b.63f038c8.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-25cfaa60.4de8b0a3.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-2f4b49f6.72362da9.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-371f347a.e5630145.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-3be6df2c.30a2a01f.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-3cf41079.b68ffacc.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-3ef7ef87.3eaaee7d.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-550c86b3.c9fd143a.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-601b6ad8.ba1cbc96.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-607ed460.7871afc6.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-629441cf.b1364170.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-62a5d3a1.f2b70fe3.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-66bac270.c4c1e6a2.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-6c75bfc5.6a1d0c5b.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-6e164f07.b74b90d4.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-6f2f15f6.c6e99893.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-711f9c26.45c3c9d0.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-71969ec6.7807273c.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-73dffb9b.20f4b591.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-74a7ee2a.f27b23bd.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-79d2db81.929122cd.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-8daa19ae.c3e170aa.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-8fe287f6.d84739e7.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-99c87ecc.6d66f4df.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-a1970df2.b9449d01.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-aa0b5c18.3b513e34.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-aae2dee0.13c7211b.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-b355131e.f82ff3de.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-bcfaf3ee.bd2d09a9.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-c5899568.43b1aa3f.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-c5ade09e.1d107173.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-c75982cc.40cf1cb7.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-eee9a612.5a362ad8.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-0021f432.e4634125.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-03c368ea.992585c8.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-085c2334.7f1f6ef8.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-0a339c19.5cc0fa40.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-0f591b95.67c08b44.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-156973d2.44419f35.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-173871af.f8212a25.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-1ac3f53e.5acc8337.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-1bbfa740.9c099598.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-235fbe0b.bd687c89.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-25cfaa60.9c156a64.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-26e76bc0.0ec04a94.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2700303d.0f62a01c.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0ac98e.2c611cca.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0af63a.0565a8df.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0b2975.92f2d4ea.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0ba88e.c4dddfd8.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0bb231.a6364944.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0c08f0.11694a16.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0c2187.aaf7b7ff.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0c7374.e2f4963e.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0c9397.1a9c5fce.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0ced5d.1ee4d3c6.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0d2b7f.1d51d4b9.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0d699b.0468f443.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0e13b2.f4217220.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d0e5975.f224ccb3.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d21d50e.b7ca5460.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d222062.a13a7e3d.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d2266e7.14e25fcc.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2d22fda1.25b3042b.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-2f4b49f6.00e35b76.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-371f347a.86a89330.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-3be6df2c.bc51045f.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-3cf41079.afc9e440.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-3ef7ef87.c22f4a14.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-4a6c4acc.93de3a16.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-51aa7cd4.b250e6df.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-550c86b3.c66690ea.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-5d4f483c.c844d3e6.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-5f6ea3e8.8d92aef1.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-601b6ad8.5f2fecb1.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-607ed460.ad71bff6.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-629441cf.f4171ce0.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-62a5d3a1.760673f7.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-66bac270.dcdaaf55.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-6a931a9a.962e099a.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-6c75bfc5.0a19f48c.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-6e164f07.a7469814.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-6e83591c.22ec3898.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-6f2f15f6.7b7cad5c.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-70624438.824797b5.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-711f9c26.03098838.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-71969ec6.0ebd42ba.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-73dffb9b.6383e3ae.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-74a7ee2a.d2728291.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-79d2db81.3df158f2.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-8daa19ae.e9e3b094.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-8fe287f6.33f0c1eb.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-99c87ecc.5b77eb95.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-a1970df2.9292718c.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-aa0b5c18.16cce47d.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-aae2dee0.b208caea.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-b355131e.d48159d7.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-bcfaf3ee.eebeaddb.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-c5899568.8734a648.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-c5ade09e.37a5bba6.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-c75982cc.5e93a9da.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-e44c8c4a.e2caed4b.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/js/chunk-eee9a612.f16c7a11.js" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/app.ca58e585.css" rel="preload" as="style">
+    <link href="https://online-mahalla.uz/css/chunk-vendors.ddf05903.css" rel="preload" as="style">
+    <link href="https://online-mahalla.uz/css/icons.6cf46235.css" rel="preload" as="style">
+    <link href="https://online-mahalla.uz/js/app.cdc9614e.js" rel="preload" as="script">
+    <link href="https://online-mahalla.uz/js/chunk-vendors.b6aef49d.js" rel="preload" as="script">
+    <link href="https://online-mahalla.uz/js/icons.6b59368f.js" rel="preload" as="script">
+    <link href="https://online-mahalla.uz/js/runtime.432eb05a.js" rel="preload" as="script">
+    <link href="https://online-mahalla.uz/css/icons.6cf46235.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/chunk-vendors.ddf05903.css" rel="stylesheet">
+    <link href="https://online-mahalla.uz/css/app.ca58e585.css" rel="stylesheet">
+    <script src="https://online-mahalla.uz/media/store/js/analytic_instruments/google-tag-manager-head.js"></script>
+    <style type="text/css">
+        .vue-modal-top,
+        .vue-modal-bottom,
+        .vue-modal-left,
+        .vue-modal-right,
+        .vue-modal-topRight,
+        .vue-modal-topLeft,
+        .vue-modal-bottomLeft,
+        .vue-modal-bottomRight {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            background: transparent;
+            z-index: 9999999;
+        }
+
+        .vue-modal-topRight,
+        .vue-modal-topLeft,
+        .vue-modal-bottomLeft,
+        .vue-modal-bottomRight {
+            width: 12px;
+            height: 12px;
+        }
+
+        .vue-modal-top {
+            right: 12;
+            top: 0;
+            width: 100%;
+            height: 12px;
+            cursor: n-resize;
+        }
+
+        .vue-modal-bottom {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 12px;
+            cursor: s-resize;
+        }
+
+        .vue-modal-left {
+            left: 0;
+            top: 0;
+            width: 12px;
+            height: 100%;
+            cursor: w-resize;
+        }
+
+        .vue-modal-right {
+            right: 0;
+            top: 0;
+            width: 12px;
+            height: 100%;
+            cursor: e-resize;
+        }
+
+        .vue-modal-topRight {
+            right: 0;
+            top: 0;
+            background: transparent;
+            cursor: ne-resize;
+        }
+
+        .vue-modal-topLeft {
+            left: 0;
+            top: 0;
+            cursor: nw-resize;
+        }
+
+        .vue-modal-bottomLeft {
+            left: 0;
+            bottom: 0;
+            cursor: sw-resize;
+        }
+
+        .vue-modal-bottomRight {
+            right: 0;
+            bottom: 0;
+            cursor: se-resize;
+        }
+
+        #vue-modal-triangle::after {
+            display: block;
+            position: absolute;
+            content: '';
+            background: transparent;
+            left: 0;
+            top: 0;
+            width: 0;
+            height: 0;
+            border-bottom: 10px solid #ddd;
+            border-left: 10px solid transparent;
+        }
+
+        #vue-modal-triangle.clicked::after {
+            border-bottom: 10px solid #369be9;
+        }
+    </style>
+    <style type="text/css">
+        .vm--block-scroll {
+            overflow: hidden;
+            width: 100vw;
+        }
+
+        .vm--container {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 999;
+        }
+
+        .vm--overlay {
+            position: fixed;
+            box-sizing: border-box;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.2);
+            /* z-index: 999; */
+            opacity: 1;
+        }
+
+        .vm--container.scrollable {
+            height: 100%;
+            min-height: 100vh;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .vm--modal {
+            position: relative;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            background-color: white;
+            border-radius: 3px;
+            box-shadow: 0 20px 60px -2px rgba(27, 33, 58, 0.4);
+        }
+
+        .vm--container.scrollable .vm--modal {
+            margin-bottom: 2px;
+        }
+
+        .vm--top-right-slot {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+
+        .vm-transition--overlay-enter-active,
+        .vm-transition--overlay-leave-active {
+            transition: all 50ms;
+        }
+
+        .vm-transition--overlay-enter,
+        .vm-transition--overlay-leave-active {
+            opacity: 0;
+        }
+
+        .vm-transition--modal-enter-active,
+        .vm-transition--modal-leave-active {
+            transition: all 400ms;
+        }
+
+        .vm-transition--modal-enter,
+        .vm-transition--modal-leave-active {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        .vm-transition--default-enter-active,
+        .vm-transition--default-leave-active {
+            transition: all 2ms;
+        }
+
+        .vm-transition--default-enter,
+        .vm-transition--default-leave-active {
+            opacity: 0;
+        }
+    </style>
+    <style type="text/css">
+        .vue-dialog {
+            font-size: 14px;
+        }
+
+        .vue-dialog div {
+            box-sizing: border-box;
+        }
+
+        .vue-dialog-content {
+            flex: 1 0 auto;
+            width: 100%;
+            padding: 14px;
+        }
+
+        .vue-dialog-content-title {
+            font-weight: 600;
+            padding-bottom: 14px;
+        }
+
+        .vue-dialog-buttons {
+            display: flex;
+            flex: 0 1 auto;
+            width: 100%;
+            border-top: 1px solid #eee;
+        }
+
+        .vue-dialog-buttons-none {
+            width: 100%;
+            padding-bottom: 14px;
+        }
+
+        .vue-dialog-button {
+            font-size: inherit;
+            background: transparent;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            cursor: pointer;
+            box-sizing: border-box;
+            line-height: 40px;
+            height: 40px;
+            color: inherit;
+            font: inherit;
+            outline: none;
+        }
+
+        .vue-dialog-button:hover {
+            background: #f9f9f9;
+        }
+
+        .vue-dialog-button:active {
+            background: #f3f3f3;
+        }
+
+        .vue-dialog-button:not(:first-of-type) {
+            border-left: 1px solid #eee;
+        }
+    </style>
+    <style type="text/css">
+        .vc-popover-content-wrapper[data-v-39b30300] {
+            --popover-horizontal-content-offset: 8px;
+            --popover-vertical-content-offset: 10px;
+            --popover-slide-translation: 15px;
+            --popover-transition-time: 0.14s ease-in-out;
+            --popover-caret-horizontal-offset: 18px;
+            --popover-caret-vertical-offset: 8px;
+            position: absolute;
+            display: block;
+            outline: none;
+            z-index: 10
+        }
+
+        .vc-popover-content-wrapper[data-v-39b30300]:not(.is-interactive) {
+            pointer-events: none
+        }
+
+        .vc-popover-content[data-v-39b30300] {
+            position: relative;
+            outline: none;
+            z-index: 10;
+            box-shadow: var(--shadow-lg)
+        }
+
+        .vc-popover-content.direction-bottom[data-v-39b30300] {
+            margin-top: var(--popover-vertical-content-offset)
+        }
+
+        .vc-popover-content.direction-top[data-v-39b30300] {
+            margin-bottom: var(--popover-vertical-content-offset)
+        }
+
+        .vc-popover-content.direction-left[data-v-39b30300] {
+            margin-right: var(--popover-horizontal-content-offset)
+        }
+
+        .vc-popover-content.direction-right[data-v-39b30300] {
+            margin-left: var(--popover-horizontal-content-offset)
+        }
+
+        .vc-popover-caret[data-v-39b30300] {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 12px;
+            height: 12px;
+            border-top: inherit;
+            border-left: inherit;
+            background-color: inherit;
+            -webkit-user-select: none;
+            user-select: none;
+            z-index: -1
+        }
+
+        .vc-popover-caret.direction-bottom[data-v-39b30300] {
+            top: 0
+        }
+
+        .vc-popover-caret.direction-bottom.align-left[data-v-39b30300] {
+            transform: translateY(-50%) rotate(45deg)
+        }
+
+        .vc-popover-caret.direction-bottom.align-center[data-v-39b30300] {
+            transform: translateX(-50%) translateY(-50%) rotate(45deg)
+        }
+
+        .vc-popover-caret.direction-bottom.align-right[data-v-39b30300] {
+            transform: translateY(-50%) rotate(45deg)
+        }
+
+        .vc-popover-caret.direction-top[data-v-39b30300] {
+            top: 100%
+        }
+
+        .vc-popover-caret.direction-top.align-left[data-v-39b30300] {
+            transform: translateY(-50%) rotate(-135deg)
+        }
+
+        .vc-popover-caret.direction-top.align-center[data-v-39b30300] {
+            transform: translateX(-50%) translateY(-50%) rotate(-135deg)
+        }
+
+        .vc-popover-caret.direction-top.align-right[data-v-39b30300] {
+            transform: translateY(-50%) rotate(-135deg)
+        }
+
+        .vc-popover-caret.direction-left[data-v-39b30300] {
+            left: 100%
+        }
+
+        .vc-popover-caret.direction-left.align-top[data-v-39b30300] {
+            transform: translateX(-50%) rotate(135deg)
+        }
+
+        .vc-popover-caret.direction-left.align-middle[data-v-39b30300] {
+            transform: translateY(-50%) translateX(-50%) rotate(135deg)
+        }
+
+        .vc-popover-caret.direction-left.align-bottom[data-v-39b30300] {
+            transform: translateX(-50%) rotate(135deg)
+        }
+
+        .vc-popover-caret.direction-right[data-v-39b30300] {
+            left: 0
+        }
+
+        .vc-popover-caret.direction-right.align-top[data-v-39b30300] {
+            transform: translateX(-50%) rotate(-45deg)
+        }
+
+        .vc-popover-caret.direction-right.align-middle[data-v-39b30300] {
+            transform: translateY(-50%) translateX(-50%) rotate(-45deg)
+        }
+
+        .vc-popover-caret.direction-right.align-bottom[data-v-39b30300] {
+            transform: translateX(-50%) rotate(-45deg)
+        }
+
+        .vc-popover-caret.align-left[data-v-39b30300] {
+            left: var(--popover-caret-horizontal-offset)
+        }
+
+        .vc-popover-caret.align-center[data-v-39b30300] {
+            left: 50%
+        }
+
+        .vc-popover-caret.align-right[data-v-39b30300] {
+            right: var(--popover-caret-horizontal-offset)
+        }
+
+        .vc-popover-caret.align-top[data-v-39b30300] {
+            top: var(--popover-caret-vertical-offset)
+        }
+
+        .vc-popover-caret.align-middle[data-v-39b30300] {
+            top: 50%
+        }
+
+        .vc-popover-caret.align-bottom[data-v-39b30300] {
+            bottom: var(--popover-caret-vertical-offset)
+        }
+
+        .fade-enter-active[data-v-39b30300],
+        .fade-leave-active[data-v-39b30300],
+        .slide-fade-enter-active[data-v-39b30300],
+        .slide-fade-leave-active[data-v-39b30300] {
+            transition: all var(--popover-transition-time);
+            pointer-events: none
+        }
+
+        .fade-enter[data-v-39b30300],
+        .fade-leave-to[data-v-39b30300],
+        .slide-fade-enter[data-v-39b30300],
+        .slide-fade-leave-to[data-v-39b30300] {
+            opacity: 0
+        }
+
+        .slide-fade-enter.direction-bottom[data-v-39b30300],
+        .slide-fade-leave-to.direction-bottom[data-v-39b30300] {
+            transform: translateY(calc(var(--popover-slide-translation)*-1))
+        }
+
+        .slide-fade-enter.direction-top[data-v-39b30300],
+        .slide-fade-leave-to.direction-top[data-v-39b30300] {
+            transform: translateY(var(--popover-slide-translation))
+        }
+
+        .slide-fade-enter.direction-left[data-v-39b30300],
+        .slide-fade-leave-to.direction-left[data-v-39b30300] {
+            transform: translateX(var(--popover-slide-translation))
+        }
+
+        .slide-fade-enter.direction-right[data-v-39b30300],
+        .slide-fade-leave-to.direction-right[data-v-39b30300] {
+            transform: translateX(calc(var(--popover-slide-translation)*-1))
+        }
+    </style>
+    <style type="text/css">
+        .vc-day-popover-row[data-v-eb5afd1a] {
+            --day-content-transition-time: 0.13s ease-in;
+            display: flex;
+            align-items: center;
+            transition: all var(--day-content-transition-time)
+        }
+
+        .vc-day-popover-row[data-v-eb5afd1a]:not(:first-child) {
+            margin-top: 3px
+        }
+
+        .vc-day-popover-row-indicator[data-v-eb5afd1a] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 0;
+            width: 15px;
+            margin-right: 3px
+        }
+
+        .vc-day-popover-row-indicator span[data-v-eb5afd1a] {
+            transition: all var(--day-content-transition-time)
+        }
+
+        .vc-day-popover-row-content[data-v-eb5afd1a] {
+            display: flex;
+            align-items: center;
+            flex-wrap: none;
+            flex-grow: 1;
+            width: max-content
+        }
+    </style>
+    <style type="text/css">
+        .vc-svg-icon[data-v-63f7b5ec] {
+            display: inline-block;
+            stroke: currentColor;
+            stroke-width: 0
+        }
+
+        .vc-svg-icon path[data-v-63f7b5ec] {
+            fill: currentColor
+        }
+    </style>
+    <style type="text/css">
+        .vc-nav-header {
+            display: flex;
+            justify-content: space-between
+        }
+
+        .vc-nav-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            line-height: var(--leading-snug);
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent;
+            border-radius: var(--rounded)
+        }
+
+        .vc-nav-arrow.is-left {
+            margin-right: auto
+        }
+
+        .vc-nav-arrow.is-right {
+            margin-left: auto
+        }
+
+        .vc-nav-arrow.is-disabled {
+            opacity: .25;
+            pointer-events: none;
+            cursor: not-allowed
+        }
+
+        .vc-nav-arrow:hover {
+            background-color: var(--gray-900)
+        }
+
+        .vc-nav-arrow:focus {
+            border-color: var(--accent-600)
+        }
+
+        .vc-nav-title {
+            color: var(--accent-100);
+            font-weight: var(--font-bold);
+            line-height: var(--leading-snug);
+            padding: 4px 8px;
+            border-radius: var(--rounded);
+            border-width: 2px;
+            border-style: solid;
+            border-color: transparent;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .vc-nav-title:hover {
+            background-color: var(--gray-900)
+        }
+
+        .vc-nav-title:focus {
+            border-color: var(--accent-600)
+        }
+
+        .vc-nav-items {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-row-gap: 2px;
+            grid-column-gap: 5px
+        }
+
+        .vc-nav-item {
+            width: 48px;
+            text-align: center;
+            line-height: var(--leading-snug);
+            font-weight: var(--font-semibold);
+            padding: 4px 0;
+            cursor: pointer;
+            border-color: transparent;
+            border-width: 2px;
+            border-style: solid;
+            border-radius: var(--rounded);
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .vc-nav-item:hover {
+            color: var(--white);
+            background-color: var(--gray-900);
+            box-shadow: var(--shadow-inner)
+        }
+
+        .vc-nav-item.is-active {
+            color: var(--accent-900);
+            background: var(--accent-100);
+            font-weight: var(--font-bold);
+            box-shadow: var(--shadow)
+        }
+
+        .vc-nav-item.is-current {
+            color: var(--accent-100);
+            font-weight: var(--bold);
+            border-color: var(--accent-100)
+        }
+
+        .vc-nav-item:focus {
+            border-color: var(--accent-600)
+        }
+
+        .vc-nav-item.is-disabled {
+            opacity: .25;
+            pointer-events: none
+        }
+
+        .vc-is-dark .vc-nav-title {
+            color: var(--gray-900)
+        }
+
+        .vc-is-dark .vc-nav-title:hover {
+            background-color: var(--gray-200)
+        }
+
+        .vc-is-dark .vc-nav-title:focus {
+            border-color: var(--accent-400)
+        }
+
+        .vc-is-dark .vc-nav-arrow:hover {
+            background-color: var(--gray-200)
+        }
+
+        .vc-is-dark .vc-nav-arrow:focus {
+            border-color: var(--accent-400)
+        }
+
+        .vc-is-dark .vc-nav-item:hover {
+            color: var(--gray-900);
+            background-color: var(--gray-200);
+            box-shadow: none
+        }
+
+        .vc-is-dark .vc-nav-item.is-active {
+            color: var(--white);
+            background: var(--accent-500)
+        }
+
+        .vc-is-dark .vc-nav-item.is-current {
+            color: var(--accent-600);
+            border-color: var(--accent-500)
+        }
+
+        .vc-is-dark .vc-nav-item:focus {
+            border-color: var(--accent-400)
+        }
+    </style>
+    <style type="text/css">
+        .vc-day[data-v-4420d078] {
+            position: relative;
+            min-height: 32px;
+            z-index: 1
+        }
+
+        .vc-day.is-not-in-month *[data-v-4420d078] {
+            opacity: 0;
+            pointer-events: none
+        }
+
+        .vc-day-layer[data-v-4420d078] {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            pointer-events: none
+        }
+
+        .vc-day-box-center-center[data-v-4420d078] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transform-origin: 50% 50%
+        }
+
+        .vc-day-box-left-center[data-v-4420d078] {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            transform-origin: 0 50%
+        }
+
+        .vc-day-box-right-center[data-v-4420d078] {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            transform-origin: 100% 50%
+        }
+
+        .vc-day-box-center-bottom[data-v-4420d078] {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end
+        }
+
+        .vc-day-content[data-v-4420d078] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            width: 28px;
+            height: 28px;
+            line-height: 28px;
+            border-radius: var(--rounded-full);
+            -webkit-user-select: none;
+            user-select: none;
+            cursor: pointer
+        }
+
+        .vc-day-content[data-v-4420d078]:hover {
+            background-color: rgba(204, 214, 224, .3)
+        }
+
+        .vc-day-content[data-v-4420d078]:focus {
+            font-weight: var(--font-bold);
+            background-color: rgba(204, 214, 224, .4)
+        }
+
+        .vc-day-content.is-disabled[data-v-4420d078] {
+            color: var(--gray-400)
+        }
+
+        .vc-is-dark .vc-day-content[data-v-4420d078]:hover {
+            background-color: rgba(114, 129, 151, .3)
+        }
+
+        .vc-is-dark .vc-day-content[data-v-4420d078]:focus {
+            background-color: rgba(114, 129, 151, .4)
+        }
+
+        .vc-is-dark .vc-day-content.is-disabled[data-v-4420d078] {
+            color: var(--gray-600)
+        }
+
+        .vc-highlights[data-v-4420d078] {
+            overflow: hidden;
+            pointer-events: none;
+            z-index: -1
+        }
+
+        .vc-highlight[data-v-4420d078] {
+            width: 28px;
+            height: 28px
+        }
+
+        .vc-highlight.vc-highlight-base-start[data-v-4420d078] {
+            width: 50% !important;
+            border-radius: 0 !important;
+            border-right-width: 0 !important
+        }
+
+        .vc-highlight.vc-highlight-base-end[data-v-4420d078] {
+            width: 50% !important;
+            border-radius: 0 !important;
+            border-left-width: 0 !important
+        }
+
+        .vc-highlight.vc-highlight-base-middle[data-v-4420d078] {
+            width: 100%;
+            border-radius: 0 !important;
+            border-left-width: 0 !important;
+            border-right-width: 0 !important;
+            margin: 0 -1px
+        }
+
+        .vc-dots[data-v-4420d078] {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .vc-dot[data-v-4420d078] {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            transition: all var(--day-content-transition-time)
+        }
+
+        .vc-dot[data-v-4420d078]:not(:last-child) {
+            margin-right: 3px
+        }
+
+        .vc-bars[data-v-4420d078] {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            width: 75%
+        }
+
+        .vc-bar[data-v-4420d078] {
+            flex-grow: 1;
+            height: 3px;
+            transition: all var(--day-content-transition-time)
+        }
+    </style>
+    <style type="text/css">
+        .vc-pane[data-v-74ad501d] {
+            min-width: 250px
+        }
+
+        .vc-header[data-v-74ad501d] {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 18px 0 18px
+        }
+
+        .vc-header.align-left[data-v-74ad501d] {
+            justify-content: flex-start
+        }
+
+        .vc-header.align-right[data-v-74ad501d] {
+            justify-content: flex-end
+        }
+
+        .vc-title[data-v-74ad501d] {
+            font-size: var(--text-lg);
+            color: var(--gray-800);
+            font-weight: var(--font-semibold);
+            line-height: 28px;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            white-space: nowrap
+        }
+
+        .vc-title[data-v-74ad501d]:hover {
+            opacity: .75
+        }
+
+        .vc-weeknumber[data-v-74ad501d] {
+            position: relative
+        }
+
+        .vc-weeknumber[data-v-74ad501d],
+        .vc-weeknumber-content[data-v-74ad501d] {
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        .vc-weeknumber-content[data-v-74ad501d] {
+            font-size: var(--text-xs);
+            font-weight: var(--font-medium);
+            font-style: italic;
+            width: 28px;
+            height: 28px;
+            margin-top: 2px;
+            color: var(--gray-500);
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .vc-weeknumber-content.is-left-outside[data-v-74ad501d] {
+            position: absolute;
+            left: var(--weeknumber-offset)
+        }
+
+        .vc-weeknumber-content.is-right-outside[data-v-74ad501d] {
+            position: absolute;
+            right: var(--weeknumber-offset)
+        }
+
+        .vc-weeks[data-v-74ad501d] {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            position: relative;
+            -webkit-overflow-scrolling: touch;
+            padding: 5px;
+            min-width: 250px
+        }
+
+        .vc-weeks.vc-show-weeknumbers[data-v-74ad501d] {
+            grid-template-columns: auto repeat(7, 1fr)
+        }
+
+        .vc-weeks.vc-show-weeknumbers.is-right[data-v-74ad501d] {
+            grid-template-columns: repeat(7, 1fr) auto
+        }
+
+        .vc-weekday[data-v-74ad501d] {
+            text-align: center;
+            color: var(--gray-500);
+            font-size: var(--text-sm);
+            font-weight: var(--font-bold);
+            line-height: 14px;
+            padding-top: 4px;
+            padding-bottom: 8px;
+            cursor: default;
+            -webkit-user-select: none;
+            user-select: none
+        }
+
+        .vc-is-dark .vc-header[data-v-74ad501d] {
+            color: var(--gray-200)
+        }
+
+        .vc-is-dark .vc-title[data-v-74ad501d] {
+            color: var(--gray-100)
+        }
+
+        .vc-is-dark .vc-weekday[data-v-74ad501d] {
+            color: var(--accent-200)
+        }
+    </style>
+    <style type="text/css">
+        .vc-nav-popover-container {
+            color: var(--white);
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            background-color: var(--gray-800);
+            border: 1px solid;
+            border-color: var(--gray-700);
+            border-radius: var(--rounded-lg);
+            padding: 4px;
+            box-shadow: var(--shadow)
+        }
+
+        .vc-is-dark .vc-nav-popover-container {
+            color: var(--gray-800);
+            background-color: var(--white);
+            border-color: var(--gray-100)
+        }
+    </style>
+    <style type="text/css">
+        .none-enter-active[data-v-5be4b00c],
+        .none-leave-active[data-v-5be4b00c] {
+            transition-duration: 0s
+        }
+
+        .fade-enter-active[data-v-5be4b00c],
+        .fade-leave-active[data-v-5be4b00c],
+        .slide-down-enter-active[data-v-5be4b00c],
+        .slide-down-leave-active[data-v-5be4b00c],
+        .slide-left-enter-active[data-v-5be4b00c],
+        .slide-left-leave-active[data-v-5be4b00c],
+        .slide-right-enter-active[data-v-5be4b00c],
+        .slide-right-leave-active[data-v-5be4b00c],
+        .slide-up-enter-active[data-v-5be4b00c],
+        .slide-up-leave-active[data-v-5be4b00c] {
+            transition: transform var(--slide-duration) var(--slide-timing), opacity var(--slide-duration) var(--slide-timing);
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden
+        }
+
+        .fade-leave-active[data-v-5be4b00c],
+        .none-leave-active[data-v-5be4b00c],
+        .slide-down-leave-active[data-v-5be4b00c],
+        .slide-left-leave-active[data-v-5be4b00c],
+        .slide-right-leave-active[data-v-5be4b00c],
+        .slide-up-leave-active[data-v-5be4b00c] {
+            position: absolute;
+            width: 100%
+        }
+
+        .fade-enter[data-v-5be4b00c],
+        .fade-leave-to[data-v-5be4b00c],
+        .none-enter[data-v-5be4b00c],
+        .none-leave-to[data-v-5be4b00c],
+        .slide-down-enter[data-v-5be4b00c],
+        .slide-down-leave-to[data-v-5be4b00c],
+        .slide-left-enter[data-v-5be4b00c],
+        .slide-left-leave-to[data-v-5be4b00c],
+        .slide-right-enter[data-v-5be4b00c],
+        .slide-right-leave-to[data-v-5be4b00c],
+        .slide-up-enter[data-v-5be4b00c],
+        .slide-up-leave-to[data-v-5be4b00c] {
+            opacity: 0
+        }
+
+        .slide-left-enter[data-v-5be4b00c],
+        .slide-right-leave-to[data-v-5be4b00c] {
+            transform: translateX(var(--slide-translate))
+        }
+
+        .slide-left-leave-to[data-v-5be4b00c],
+        .slide-right-enter[data-v-5be4b00c] {
+            transform: translateX(calc(var(--slide-translate)*-1))
+        }
+
+        .slide-down-leave-to[data-v-5be4b00c],
+        .slide-up-enter[data-v-5be4b00c] {
+            transform: translateY(var(--slide-translate))
+        }
+
+        .slide-down-enter[data-v-5be4b00c],
+        .slide-up-leave-to[data-v-5be4b00c] {
+            transform: translateY(calc(var(--slide-translate)*-1))
+        }
+    </style>
+    <style type="text/css">
+        .vc-container {
+            --white: #fff;
+            --black: #000;
+            --gray-100: #f7fafc;
+            --gray-200: #edf2f7;
+            --gray-300: #e2e8f0;
+            --gray-400: #cbd5e0;
+            --gray-500: #a0aec0;
+            --gray-600: #718096;
+            --gray-700: #4a5568;
+            --gray-800: #2d3748;
+            --gray-900: #1a202c;
+            --red-100: #fff5f5;
+            --red-200: #fed7d7;
+            --red-300: #feb2b2;
+            --red-400: #fc8181;
+            --red-500: #f56565;
+            --red-600: #e53e3e;
+            --red-700: #c53030;
+            --red-800: #9b2c2c;
+            --red-900: #742a2a;
+            --orange-100: #fffaf0;
+            --orange-200: #feebc8;
+            --orange-300: #fbd38d;
+            --orange-400: #f6ad55;
+            --orange-500: #ed8936;
+            --orange-600: #dd6b20;
+            --orange-700: #c05621;
+            --orange-800: #9c4221;
+            --orange-900: #7b341e;
+            --yellow-100: ivory;
+            --yellow-200: #fefcbf;
+            --yellow-300: #faf089;
+            --yellow-400: #f6e05e;
+            --yellow-500: #ecc94b;
+            --yellow-600: #d69e2e;
+            --yellow-700: #b7791f;
+            --yellow-800: #975a16;
+            --yellow-900: #744210;
+            --green-100: #f0fff4;
+            --green-200: #c6f6d5;
+            --green-300: #9ae6b4;
+            --green-400: #68d391;
+            --green-500: #48bb78;
+            --green-600: #38a169;
+            --green-700: #2f855a;
+            --green-800: #276749;
+            --green-900: #22543d;
+            --teal-100: #e6fffa;
+            --teal-200: #b2f5ea;
+            --teal-300: #81e6d9;
+            --teal-400: #4fd1c5;
+            --teal-500: #38b2ac;
+            --teal-600: #319795;
+            --teal-700: #2c7a7b;
+            --teal-800: #285e61;
+            --teal-900: #234e52;
+            --blue-100: #ebf8ff;
+            --blue-200: #bee3f8;
+            --blue-300: #90cdf4;
+            --blue-400: #63b3ed;
+            --blue-500: #4299e1;
+            --blue-600: #3182ce;
+            --blue-700: #2b6cb0;
+            --blue-800: #2c5282;
+            --blue-900: #2a4365;
+            --indigo-100: #ebf4ff;
+            --indigo-200: #c3dafe;
+            --indigo-300: #a3bffa;
+            --indigo-400: #7f9cf5;
+            --indigo-500: #667eea;
+            --indigo-600: #5a67d8;
+            --indigo-700: #4c51bf;
+            --indigo-800: #434190;
+            --indigo-900: #3c366b;
+            --purple-100: #faf5ff;
+            --purple-200: #e9d8fd;
+            --purple-300: #d6bcfa;
+            --purple-400: #b794f4;
+            --purple-500: #9f7aea;
+            --purple-600: #805ad5;
+            --purple-700: #6b46c1;
+            --purple-800: #553c9a;
+            --purple-900: #44337a;
+            --pink-100: #fff5f7;
+            --pink-200: #fed7e2;
+            --pink-300: #fbb6ce;
+            --pink-400: #f687b3;
+            --pink-500: #ed64a6;
+            --pink-600: #d53f8c;
+            --pink-700: #b83280;
+            --pink-800: #97266d;
+            --pink-900: #702459
+        }
+
+        .vc-container.vc-red {
+            --accent-100: var(--red-100);
+            --accent-200: var(--red-200);
+            --accent-300: var(--red-300);
+            --accent-400: var(--red-400);
+            --accent-500: var(--red-500);
+            --accent-600: var(--red-600);
+            --accent-700: var(--red-700);
+            --accent-800: var(--red-800);
+            --accent-900: var(--red-900)
+        }
+
+        .vc-container.vc-orange {
+            --accent-100: var(--orange-100);
+            --accent-200: var(--orange-200);
+            --accent-300: var(--orange-300);
+            --accent-400: var(--orange-400);
+            --accent-500: var(--orange-500);
+            --accent-600: var(--orange-600);
+            --accent-700: var(--orange-700);
+            --accent-800: var(--orange-800);
+            --accent-900: var(--orange-900)
+        }
+
+        .vc-container.vc-yellow {
+            --accent-100: var(--yellow-100);
+            --accent-200: var(--yellow-200);
+            --accent-300: var(--yellow-300);
+            --accent-400: var(--yellow-400);
+            --accent-500: var(--yellow-500);
+            --accent-600: var(--yellow-600);
+            --accent-700: var(--yellow-700);
+            --accent-800: var(--yellow-800);
+            --accent-900: var(--yellow-900)
+        }
+
+        .vc-container.vc-green {
+            --accent-100: var(--green-100);
+            --accent-200: var(--green-200);
+            --accent-300: var(--green-300);
+            --accent-400: var(--green-400);
+            --accent-500: var(--green-500);
+            --accent-600: var(--green-600);
+            --accent-700: var(--green-700);
+            --accent-800: var(--green-800);
+            --accent-900: var(--green-900)
+        }
+
+        .vc-container.vc-teal {
+            --accent-100: var(--teal-100);
+            --accent-200: var(--teal-200);
+            --accent-300: var(--teal-300);
+            --accent-400: var(--teal-400);
+            --accent-500: var(--teal-500);
+            --accent-600: var(--teal-600);
+            --accent-700: var(--teal-700);
+            --accent-800: var(--teal-800);
+            --accent-900: var(--teal-900)
+        }
+
+        .vc-container.vc-blue {
+            --accent-100: var(--blue-100);
+            --accent-200: var(--blue-200);
+            --accent-300: var(--blue-300);
+            --accent-400: var(--blue-400);
+            --accent-500: var(--blue-500);
+            --accent-600: var(--blue-600);
+            --accent-700: var(--blue-700);
+            --accent-800: var(--blue-800);
+            --accent-900: var(--blue-900)
+        }
+
+        .vc-container.vc-indigo {
+            --accent-100: var(--indigo-100);
+            --accent-200: var(--indigo-200);
+            --accent-300: var(--indigo-300);
+            --accent-400: var(--indigo-400);
+            --accent-500: var(--indigo-500);
+            --accent-600: var(--indigo-600);
+            --accent-700: var(--indigo-700);
+            --accent-800: var(--indigo-800);
+            --accent-900: var(--indigo-900)
+        }
+
+        .vc-container.vc-purple {
+            --accent-100: var(--purple-100);
+            --accent-200: var(--purple-200);
+            --accent-300: var(--purple-300);
+            --accent-400: var(--purple-400);
+            --accent-500: var(--purple-500);
+            --accent-600: var(--purple-600);
+            --accent-700: var(--purple-700);
+            --accent-800: var(--purple-800);
+            --accent-900: var(--purple-900)
+        }
+
+        .vc-container.vc-pink {
+            --accent-100: var(--pink-100);
+            --accent-200: var(--pink-200);
+            --accent-300: var(--pink-300);
+            --accent-400: var(--pink-400);
+            --accent-500: var(--pink-500);
+            --accent-600: var(--pink-600);
+            --accent-700: var(--pink-700);
+            --accent-800: var(--pink-800);
+            --accent-900: var(--pink-900)
+        }
+
+        .vc-container {
+            --font-normal: 400;
+            --font-medium: 500;
+            --font-semibold: 600;
+            --font-bold: 700;
+            --text-xs: 12px;
+            --text-sm: 14px;
+            --text-base: 16px;
+            --text-lg: 18px;
+            --leading-snug: 1.375;
+            --rounded: 0.25rem;
+            --rounded-lg: 0.5rem;
+            --rounded-full: 9999px;
+            --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            --slide-translate: 22px;
+            --slide-duration: 0.15s;
+            --slide-timing: ease;
+            --day-content-transition-time: 0.13s ease-in;
+            --weeknumber-offset: -34px;
+            position: relative;
+            display: inline-flex;
+            width: max-content;
+            height: max-content;
+            font-family: BlinkMacSystemFont, -apple-system, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, Helvetica, Arial, sans-serif;
+            color: var(--gray-900);
+            background-color: var(--white);
+            border: 1px solid;
+            border-color: var(--gray-400);
+            border-radius: var(--rounded-lg);
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            -webkit-tap-highlight-color: transparent
+        }
+
+        .vc-container,
+        .vc-container * {
+            box-sizing: border-box
+        }
+
+        .vc-container:focus,
+        .vc-container :focus {
+            outline: none
+        }
+
+        .vc-container [role=button],
+        .vc-container button {
+            cursor: pointer
+        }
+
+        .vc-container.vc-is-expanded {
+            min-width: 100%
+        }
+
+        .vc-container .vc-container {
+            border: none
+        }
+
+        .vc-container.vc-is-dark {
+            color: var(--gray-100);
+            background-color: var(--gray-900);
+            border-color: var(--gray-700)
+        }
+    </style>
+    <style type="text/css">
+        .vc-pane-container {
+            width: 100%;
+            position: relative
+        }
+
+        .vc-pane-container.in-transition {
+            overflow: hidden
+        }
+
+        .vc-pane-layout {
+            display: grid
+        }
+
+        .vc-arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            -webkit-user-select: none;
+            user-select: none;
+            pointer-events: auto;
+            color: var(--gray-600);
+            border-width: 2px;
+            border-style: solid;
+            border-radius: var(--rounded);
+            border-color: transparent
+        }
+
+        .vc-arrow:hover {
+            background: var(--gray-200)
+        }
+
+        .vc-arrow:focus {
+            border-color: var(--gray-300)
+        }
+
+        .vc-arrow.is-disabled {
+            opacity: .25;
+            pointer-events: none;
+            cursor: not-allowed
+        }
+
+        .vc-day-popover-container {
+            color: var(--white);
+            background-color: var(--gray-800);
+            border: 1px solid;
+            border-color: var(--gray-700);
+            border-radius: var(--rounded);
+            font-size: var(--text-xs);
+            font-weight: var(--font-medium);
+            padding: 4px 8px;
+            box-shadow: var(--shadow)
+        }
+
+        .vc-day-popover-header {
+            font-size: var(--text-xs);
+            color: var(--gray-300);
+            font-weight: var(--font-semibold);
+            text-align: center
+        }
+
+        .vc-arrows-container {
+            width: 100%;
+            position: absolute;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 10px;
+            pointer-events: none
+        }
+
+        .vc-arrows-container.title-left {
+            justify-content: flex-end
+        }
+
+        .vc-arrows-container.title-right {
+            justify-content: flex-start
+        }
+
+        .vc-is-dark .vc-arrow {
+            color: var(--white)
+        }
+
+        .vc-is-dark .vc-arrow:hover {
+            background: var(--gray-800)
+        }
+
+        .vc-is-dark .vc-arrow:focus {
+            border-color: var(--gray-700)
+        }
+
+        .vc-is-dark .vc-day-popover-container {
+            color: var(--gray-800);
+            background-color: var(--white);
+            border-color: var(--gray-100)
+        }
+
+        .vc-is-dark .vc-day-popover-header {
+            color: var(--gray-700)
+        }
+    </style>
+    <style type="text/css">
+        .vc-select[data-v-7b2eaf0a] {
+            position: relative
+        }
+
+        .vc-select select[data-v-7b2eaf0a] {
+            flex-grow: 1;
+            display: block;
+            -webkit-appearance: none;
+            appearance: none;
+            width: 52px;
+            height: 30px;
+            font-size: var(--text-base);
+            font-weight: var(--font-medium);
+            text-align: left;
+            background-color: var(--gray-200);
+            border: 2px solid;
+            border-color: var(--gray-200);
+            color: var(--gray-900);
+            padding: 0 20px 0 8px;
+            border-radius: var(--rounded);
+            line-height: var(--leading-tight);
+            text-indent: 0;
+            cursor: pointer;
+            -moz-padding-start: 3px;
+        }
+
+        .vc-select select[data-v-7b2eaf0a]:hover {
+            color: var(--gray-600)
+        }
+
+        .vc-select select[data-v-7b2eaf0a]:focus {
+            outline: 0;
+            border-color: var(--accent-400);
+            background-color: var(--white)
+        }
+
+        .vc-select-arrow[data-v-7b2eaf0a] {
+            display: flex;
+            align-items: center;
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            padding: 0 4px 0 0;
+            color: var(--gray-500)
+        }
+
+        .vc-select-arrow svg[data-v-7b2eaf0a] {
+            width: 16px;
+            height: 16px;
+            fill: currentColor
+        }
+
+        .vc-is-dark select[data-v-7b2eaf0a] {
+            background: var(--gray-700);
+            color: var(--gray-100);
+            border-color: var(--gray-700)
+        }
+
+        .vc-is-dark select[data-v-7b2eaf0a]:hover {
+            color: var(--gray-400)
+        }
+
+        .vc-is-dark select[data-v-7b2eaf0a]:focus {
+            border-color: var(--accent-500);
+            background-color: var(--gray-800)
+        }
+    </style>
+    <style type="text/css">
+        .vc-time-picker[data-v-f4e11af8] {
+            display: flex;
+            align-items: center;
+            padding: 8px
+        }
+
+        .vc-time-picker.vc-invalid[data-v-f4e11af8] {
+            pointer-events: none;
+            opacity: .5
+        }
+
+        .vc-time-picker.vc-bordered[data-v-f4e11af8] {
+            border-top: 1px solid var(--gray-400)
+        }
+
+        .vc-date-time[data-v-f4e11af8] {
+            margin-left: 8px
+        }
+
+        .vc-disabled[data-v-f4e11af8] {
+            pointer-events: none;
+            opacity: .5
+        }
+
+        .vc-time-icon[data-v-f4e11af8] {
+            width: 16px;
+            height: 16px;
+            color: var(--gray-600)
+        }
+
+        .vc-date[data-v-f4e11af8] {
+            display: flex;
+            align-items: center;
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            text-transform: uppercase;
+            padding: 0 0 4px 4px;
+            margin-top: -4px
+        }
+
+        .vc-date .vc-weekday[data-v-f4e11af8] {
+            color: var(--gray-700);
+            letter-spacing: var(--tracking-wide)
+        }
+
+        .vc-date .vc-month[data-v-f4e11af8] {
+            color: var(--accent-600);
+            margin-left: 8px
+        }
+
+        .vc-date .vc-day[data-v-f4e11af8] {
+            color: var(--accent-600);
+            margin-left: 4px
+        }
+
+        .vc-date .vc-year[data-v-f4e11af8] {
+            color: var(--gray-500);
+            margin-left: 8px
+        }
+
+        .vc-am-pm[data-v-f4e11af8],
+        .vc-time[data-v-f4e11af8] {
+            display: flex;
+            align-items: center
+        }
+
+        .vc-am-pm[data-v-f4e11af8] {
+            background: var(--gray-200);
+            margin-left: 8px;
+            padding: 4px;
+            border-radius: var(--rounded);
+            height: 30px
+        }
+
+        .vc-am-pm button[data-v-f4e11af8] {
+            color: var(--gray-900);
+            font-size: var(--text-sm);
+            font-weight: var(--font-medium);
+            padding: 0 4px;
+            background: transparent;
+            border: 2px solid transparent;
+            border-radius: var(--rounded);
+            line-height: var(--leading-snug)
+        }
+
+        .vc-am-pm button[data-v-f4e11af8]:hover {
+            color: var(--gray-600)
+        }
+
+        .vc-am-pm button[data-v-f4e11af8]:focus {
+            border-color: var(--accent-400)
+        }
+
+        .vc-am-pm button.active[data-v-f4e11af8] {
+            background: var(--accent-600);
+            color: var(--white)
+        }
+
+        .vc-am-pm button.active[data-v-f4e11af8]:hover {
+            background: var(--accent-500)
+        }
+
+        .vc-am-pm button.active[data-v-f4e11af8]:focus {
+            border-color: var(--accent-400)
+        }
+
+        .vc-is-dark .vc-time-picker[data-v-f4e11af8] {
+            border-color: var(--gray-700)
+        }
+
+        .vc-is-dark .vc-time-icon[data-v-f4e11af8],
+        .vc-is-dark .vc-weekday[data-v-f4e11af8] {
+            color: var(--gray-400)
+        }
+
+        .vc-is-dark .vc-day[data-v-f4e11af8],
+        .vc-is-dark .vc-month[data-v-f4e11af8] {
+            color: var(--accent-400)
+        }
+
+        .vc-is-dark .vc-year[data-v-f4e11af8] {
+            color: var(--gray-500)
+        }
+
+        .vc-is-dark .vc-am-pm[data-v-f4e11af8] {
+            background: var(--gray-700)
+        }
+
+        .vc-is-dark .vc-am-pm[data-v-f4e11af8]:focus {
+            border-color: var(--accent-500)
+        }
+
+        .vc-is-dark .vc-am-pm button[data-v-f4e11af8] {
+            color: var(--gray-100)
+        }
+
+        .vc-is-dark .vc-am-pm button[data-v-f4e11af8]:hover {
+            color: var(--gray-400)
+        }
+
+        .vc-is-dark .vc-am-pm button[data-v-f4e11af8]:focus {
+            border-color: var(--accent-500)
+        }
+
+        .vc-is-dark .vc-am-pm button.active[data-v-f4e11af8] {
+            background: var(--accent-500);
+            color: var(--white)
+        }
+
+        .vc-is-dark .vc-am-pm button.active[data-v-f4e11af8]:hover {
+            background: var(--accent-600)
+        }
+
+        .vc-is-dark .vc-am-pm button.active[data-v-f4e11af8]:focus {
+            border-color: var(--accent-500)
+        }
+    </style>
+    <style>
+        .green-outline {
+            outline: 1px solid #40df40;
+        }
+
+        .red-outline {
+            outline: 1px solid #ff3737;
+        }
+    </style>
+    <style>
+        .text-muted {
+            display: block;
+            text-align: right;
+
+        }
+
+        .top-right-wrapper {
+            display: flex;
+            align-items: center;
+
+        }
+
+        .add-task {
+            margin-right: 55px;
+
+        }
+
+        .chat {
+            cursor: pointer;
+            right: 20px;
+            position: relative
+        }
+
+        .chat .mdi-message {
+            font-size: 25px;
+
+        }
+
+        .chat .countChat {
+            position: absolute;
+            top: 3px;
+            left: 15px;
+            width: 15px;
+            height: 15px;
+            font-size: 11px;
+            color: #fff;
+            background-color: #ff5252;
+            border-radius: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .bell {
+            position: relative;
+            cursor: pointer;
+
+        }
+
+        .bell .fa-bell {
+            font-size: 23px;
+
+        }
+
+        .animation_bell .fa-bell {
+            animation: bell 5s ease-out infinite;
+            transform-origin: center top;
+
+            /*     animation-delay: 4s; */
+            transition-property: animation;
+
+        }
+
+        .bell .count {
+            position: absolute;
+            top: -5px;
+            left: 13px;
+            width: 22px;
+            height: 22px;
+
+            /*     padding: 2px 6px; */
+            font-size: 11px;
+            color: #fff;
+            background-color: red;
+            border-radius: 100px;
+            border: 2px solid #335d99;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .chat-dropdown {
+            display: block;
+            position: absolute;
+            right: 310px;
+            transition: all 300ms ease;
+            top: 65px;
+            background: #fff;
+            width: 400px;
+            color: var(--pl-text-color);
+            box-shadow: 1px 2px 9px silver;
+
+        }
+
+        .bell-dropdown {
+            display: block;
+            position: absolute;
+
+            /*     overflow: auto; */
+            right: 314px;
+
+            /*  top: 40px; */
+
+            /*     right: 14%; */
+            transition: all 300ms ease;
+            -moz-transition: all 300ms ease;
+            -webkit-transition: all 300ms ease;
+            top: 65px;
+            background: #fff;
+            color: #56678f;
+            height: 400px;
+
+            /*     height: auto; */
+
+            /*     max-height: 400px; */
+            width: 400px;
+
+            /*     border-radius: 0.25rem; */
+            box-shadow: 1px 2px 9px silver;
+            opacity: 1;
+
+        }
+
+        .chat-dropdown::after {
+            content: '';
+            position: absolute;
+            top: -7px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            transform: rotate(45deg);
+            background: var(--pl-top-bar);
+            display: inline-block !important;
+
+        }
+
+        .bell-dropdown::after {
+            content: '';
+            position: absolute;
+            top: -7px;
+            right: 10px;
+            width: 25px;
+            height: 25px;
+            transform: rotate(45deg);
+            background: #335D99;
+            display: inline-block !important;
+
+        }
+
+        .chat-dropdown-header {
+            display: block;
+
+            /*     border-top-left-radius: 5px;    border-top-right-radius: 5px;    border-bottom: 1px solid #e5e9ec; */
+            background: var(--pl-top-bar);
+            padding: 12px;
+            color: #fff;
+            margin: 0px;
+            height: 50px;
+
+        }
+
+        .drop_title {
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            border-bottom: 1px solid #e5e9ec;
+            background: #335D99;
+            padding: 12px;
+            color: #fff;
+            margin: 0px;
+            align-items: center;
+            height: 50px;
+
+        }
+
+        .drop_title>p {
+            margin-top: 15px;
+
+        }
+
+        .footer_drop_title {
+            display: block;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top: 1px solid #e5e9ec;
+            background: #F4F5F7;
+            padding: 12px;
+            color: #607096;
+            cursor: pointer;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-bottom: 1px solid rgba(9, 45, 66, 0.13);
+            border: 0;
+            box-shadow: 0 0 1px 1px rgba(9, 45, 66, 0.25), 0 0 0 1px rgba(9, 45, 66, 0.08);
+
+        }
+
+        .footer_drop_title:hover {
+            background: #e0e7f3;
+
+        }
+
+        .bell-dropdown-hide {
+            display: none;
+            opacity: 0;
+            margin-top: 15px;
+
+        }
+
+        .bell-dropdown ul {
+            padding: 0;
+            width: 100%;
+
+            /*     height: 100%; */
+            overflow-y: auto;
+
+        }
+
+        .bell-dropdown ul li {
+            list-style: none;
+            border-bottom: 1px solid #335d99;
+            background-position: center;
+            padding: 10px 5px;
+            position: relative;
+            transition: background-color 50ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, background 0.4s;
+
+        }
+
+        .bell-dropdown ul li:active {
+            background-color: #ECECF1;
+            background-size: 100%;
+            transition: background 0s;
+
+        }
+
+        .bell-dropdown ul li:last-child {
+            border-bottom: 0;
+
+        }
+
+        .bell-dropdown ul li::before {
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            content: '';
+            background: #80BDD0;
+            top: 0;
+            left: 0;
+
+        }
+
+        .bell-dropdown ul li:hover {
+            background: #ECECF1;
+
+        }
+
+        .drop_body {
+            overflow: auto;
+            height: 353px;
+
+        }
+
+        .notify_history {
+            cursor: pointer;
+            z-index: 1;
+
+        }
+
+        .top-right-wrapper__icons-with-hint {
+            display: flex;
+            align-items: center;
+            gap: 17px
+        }
+
+        .notify_history:hover {
+            color: #E8EAED;
+
+        }
+
+        .chat-dropdown-enter-active {
+            transition: all .3s ease;
+
+        }
+
+        .chat-dropdown-leave-active {
+            transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+
+        }
+
+        .chat-dropdown-enter,
+        .chat-dropdown-leave-to
+
+        /* .chat-dropdown-leave-active below version 2.1.8 */
+            {
+            transform: translateY(-10px);
+            opacity: 0;
+
+        }
+
+        @keyframes bell {
+            0% {
+                transform: rotate(10deg);
+
+            }
+
+            2% {
+                transform: rotate(-10deg);
+
+            }
+
+            4% {
+                transform: rotate(10deg);
+
+            }
+
+            8% {
+                transform: rotate(-10deg);
+
+            }
+
+            10% {
+                transform: rotate(10deg);
+
+            }
+
+            13% {
+                transform: rotate(-10deg);
+
+            }
+
+            16% {
+                transform: rotate(10deg);
+
+            }
+
+            20% {
+                transform: rotate(0);
+
+            }
+
+            25% {
+                transform: rotate(0);
+
+            }
+
+            30% {
+                transform: rotate(0);
+
+            }
+
+            35% {
+                transform: rotate(0);
+
+            }
+
+            40% {
+                transform: rotate(0);
+
+            }
+
+            50% {
+                transform: rotate(0);
+
+            }
+
+            60% {
+                transform: rotate(0);
+
+            }
+
+            70% {
+                transform: rotate(0);
+
+            }
+
+            80% {
+                transform: rotate(0);
+
+            }
+
+            90% {
+                transform: rotate(0);
+
+            }
+
+            100% {
+                transform: rotate(0);
+
+            }
+
+
+            /*   0% {transform: rotate(35deg);}  12.5% {transform: rotate(-30deg);}  25% {transform: rotate(25deg);}  37.5% {transform: rotate(-20deg);}  50% {transform: rotate(15deg);}  62.5% {transform: rotate(-10deg)}  75% {transform: rotate(5deg)}  100% {transform: rotate(0);}   */
+
+        }
+
+        .calendar {
+            cursor: pointer;
+            right: 35px;
+            position: relative
+        }
+
+        .calendar .fa-calendar-alt {
+            font-size: 23px;
+
+        }
+
+        .phone-book {
+            cursor: pointer;
+            right: 35px;
+            position: relative
+        }
+
+        .telegram-icon {
+            cursor: pointer;
+            right: 35px;
+            position: relative
+        }
+
+        .phone-book .fa-address-book {
+            font-size: 23px;
+
+        }
+
+        @media (max-width: 1380px) {
+            .title {
+                display: none;
+
+            }
+
+
+        }
+    </style>
+    <style>
+        .onm-btn {
+            max-height: 50px;
+            padding: 16px 28px;
+            border-radius: 25px;
+            transition: all 0.3s;
+            font-family: 'PT Sans Caption', sans-serif;
+            outline: none;
+            text-align: center;
+
+        }
+
+        .onm-btn img {
+            width: 25px;
+            height: 25px;
+            object-fit: contain;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .onm-btn>svg {
+            margin-right: 5px;
+
+        }
+
+        .onm-btn>span {
+            white-space: nowrap;
+
+        }
+
+        .onm-btn>a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+
+        }
+
+        .onm-btn--blue {
+            color: white;
+            background: #0060FE;
+            border: 1px solid #0060FE;
+
+        }
+
+        .onm-btn--dark-blue {
+            color: white;
+            border: 1px solid #100448;
+            background-color: #100448;
+
+        }
+
+        .onm-btn--dark-blue:hover {
+            color: #100448;
+            border: 1px solid #100448;
+            background-color: white;
+
+        }
+
+        .onm-btn--blue:hover {
+            color: #0060FE;
+            background-color: white;
+            border: 1px solid #0060FE;
+
+        }
+
+        .onm-btn--r5 {
+            border-radius: 5px;
+
+        }
+
+        .onm-btn--w100p {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        .onm-btn--blue:hover a {
+            color: #0060FE
+        }
+
+        .onm-btn-197 {
+            width: 197px;
+
+        }
+    </style>
+    <script src="https://online-mahalla.uz/media/store/js/svg-inject.min.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/yandex.js"></script>
+    <script src="https://www.googletagmanager.com/gtag/js?id=G-100DESZ2QC" async=""></script>
+    <link type="text/css" rel="stylesheet"
+        href="https://api.online-mahalla.uz/web/v1/store/file/css/swiper-carousel.css">
+    <link type="text/css" rel="stylesheet" href="https://api.online-mahalla.uz/web/v1/store/file/css/fancybox.css">
+    <script src="https://api.online-mahalla.uz/web/v1/store/file/js/fancybox-umd.js"></script>
+    <script src="https://api.online-mahalla.uz/web/v1/store/file/js/swiper-carousel.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/rating_v1.0.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/rating_v1.1.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/rating_v1.2.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/rating_v1.3.js"></script>
+    <script src="https://online-mahalla.uz/media/store/js/rating_v1.4.js"></script>
+    <style type="text/css">
+        img[onload^="SVGInject("] {
+            visibility: hidden;
+        }
+    </style>
+    <style>
+        /* 	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap'); */
+
+
+        /* @import url('https://api.online-mahalla.uz/web/v1/store/file/fonts/font.css'); */
+        .onm-login {
+            width: 50%;
+            min-width: 400px;
+            margin: 0 auto;
+
+        }
+
+        .onm-login__form--card {
+            flex: 1;
+            padding: 30px 32px;
+            background-color: #fff;
+
+        }
+
+        .onm-login__form--login {
+            margin-bottom: 23px;
+
+        }
+
+        .onm-login__form--header p {
+            margin: 0;
+            margin-bottom: 7px;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            font-family: 'PT Sans Caption', sans-serif;
+
+            /*   font-family: 'Montserrat', sans-serif; */
+
+        }
+
+        .onm-login__form--header h3 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 20px;
+            line-height: 24px;
+            color: #000000;
+            margin-bottom: 25px;
+            font-family: 'PT Sans Caption', sans-serif;
+
+            /*   font-family: 'Montserrat', sans-serif; */
+
+        }
+
+        .onm-login__form--item {
+            margin-bottom: 17px;
+
+        }
+
+        .onm-login__form--item>label {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 20px;
+            display: flex;
+            color: #000000;
+            margin-bottom: 12px;
+            font-family: 'PT Sans Caption', sans-serif;
+
+            /*   font-family: 'Montserrat', sans-serif; */
+
+        }
+
+        .onm-login__form--item input {
+            width: 100%;
+            outline: none;
+            padding: 16px;
+            padding-left: 41px;
+            border-radius: 5px;
+            border: 1px solid #E1EDF7;
+
+        }
+
+        .onm-login__form--item:nth-child(2) input {
+            padding-right: 30px;
+
+        }
+
+        .onm-login__form--item>span {
+            position: relative;
+
+        }
+
+        .onm-login__form--item:first-child>span::before {
+            content: url("https://online-mahalla.uz/media/store//img/login-icon.svg");
+            top: calc(50% + 0.5px);
+            left: 15px;
+            position: absolute;
+            height: 100%;
+            transform: translateY(-50%);
+
+        }
+
+        .onm-login__form--item:nth-child(2)>span::before {
+            content: url("https://online-mahalla.uz/media/store//img/password-icon.svg");
+            top: calc(50% + 1px);
+            left: 15px;
+            position: absolute;
+            transform: translateY(-50%);
+
+        }
+
+        .onm-login__eye {
+            top: 50%;
+            right: 15px;
+            cursor: pointer;
+            position: absolute;
+            transform: translateY(-50%);
+
+        }
+
+        .onm-login__banner {
+            flex: 1;
+            padding: 0 32px;
+            position: relative;
+            background-color: green;
+            background-size: cover;
+            background-position: center center;
+        }
+
+        .onm-login__links {
+            position: absolute;
+            bottom: 50px;
+            display: flex;
+            gap: 10px;
+            list-style: none;
+            filter: brightness(0) invert(1);
+            opacity: 0.8;
+            transition: 0.3s;
+
+        }
+
+        .onm-login__banner::after {
+            content: "© RealSoft 2022";
+            position: absolute;
+            left: 50%;
+            bottom: 20px;
+            transform: translateX(-50%);
+            font-family: 'PT Sans Caption', sans-serif;
+
+            /*   font-family: 'Montserrat', sans-serif; */
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 24px;
+            color: #FFFFFF;
+
+        }
+
+        @media screen and (max-width: 991px) {
+            .onm-login {
+                width: 80%;
+
+            }
+
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .onm-login {
+                width: 90%;
+                min-width: 300px;
+
+            }
+
+            .onm-login__banner {
+                display: none;
+
+            }
+
+
+        }
+    </style>
+    <style>
+        body>a {
+            display: none;
+
+        }
+
+        .onm-login__page {
+            top: 50%;
+            left: 50%;
+            width: 100%;
+            position: fixed;
+            transform: translate(-50%, -50%);
+            align-items: stretch;
+
+        }
+    </style>
+</head>
+
+<body><noscript><strong>We're sorry but @realsoft/platon-core doesn't work properly without JavaScript enabled. Please
+            enable it to continue.</strong></noscript>
+    <script src="/config.js"></script>
+    <div data-v-0a5a1104="">
+        <div data-v-0a5a1104="">
+            <div><!---->
+                <div class="onm-login__page">
+                    <div class="onm-login">
+                        <div class="onm-login__wrapper d-flex justify-content-center">
+                            <div class="onm-login__form--card">
+                                <div class="onm-login__form--login"><a href="/" class="router-link-active"><img
+                                            src="https://online-mahalla.uz/media/store/img/header-logo.svg"
+                                            alt="logo"></a></div>
+                                <div class="onm-login__form--header">
+                                    <p>Хуш келибсиз</p>
+                                    <h3>Тизимга кириш</h3>
+                                </div>
+                                <form class="onm-login__form">
+                                    <div class="onm-login__form--item"><label>Логин</label> <span><input type="text"
+                                                placeholder="Киритиш"></span></div>
+                                    <div class="onm-login__form--item"><label>Парол</label> <span><input
+                                                placeholder="Парол" type="password"> <span class="onm-login__eye"><img
+                                                    src="https://online-mahalla.uz/media/store/img/hide-password.svg"
+                                                    alt="online-mahalla"></span></span></div> <!---->
+                                    <div class="onm-login__actions d-flex flex-column align-items-center"><button
+                                            type="button"
+                                            class="onm-btn onm-btn--blue onm-btn--r5 onm-btn--w100p d-flex align-items-center my-3"><span>Тизимга
+                                                кириш</span> </button> <button type="button"
+                                            class="onm-btn onm-btn--dark-blue onm-btn--r5 onm-btn--w100p d-flex align-items-center"><span>ЭРИ
+                                                билан кириш</span> </button></div>
+                                </form>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div><!---->
+            </div>
+        </div>
+    </div>
+    <script>let { PLATON_APP_NAME: appName, PLATON_APP_TITLE: appTitle } = window.configs
+
+        window.document.title = appTitle || appName</script>
+    <script src="https://online-mahalla.uz/js/runtime.432eb05a.js"></script>
+    <script src="https://online-mahalla.uz/js/icons.6b59368f.js"></script>
+    <script src="https://online-mahalla.uz/js/chunk-vendors.b6aef49d.js"></script>
+    <script src="https://online-mahalla.uz/js/app.cdc9614e.js"></script>
+    <div><!---->
+        <div></div>
+    </div>
+    <div id="modals-container"></div>
+    <script src="https://online-mahalla.uz/media/store/js/notification.js?v=0.0.1"></script>
+    <script src="https://online-mahalla.uz/media/store/js/helpers.js"></script>
+</body>
+
+</html>
