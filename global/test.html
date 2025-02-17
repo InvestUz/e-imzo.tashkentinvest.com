@@ -1,0 +1,151 @@
+<script type="text/javascript">
+    EIMZOClient.API_KEYS = [
+        'null', 'E0A205EC4E7B78BBB56AFF83A733A1BB9FD39D562E67978CC5E7D73B0951DB1954595A20672A63332535E13CC6EC1E1FC8857BB09E0855D7E76E411B6FA16E9D',
+        'localhost', '96D0C1491615C82B9A54D9989779DF825B690748224C2B04F500F370D51827CE2644D8D4A82C18184D73AB8530BB8ED537269603F61DB0D03D2104ABF789970B',
+        '127.0.0.1', 'A7BCFA5D490B351BE0754130DF03A068F855DB4333D43921125B9CF2670EF6A40370C646B90401955E1F7BC9CDBF59CE0B2C5467D820BE189C845D0B79CFC96F',
+        'hujjat.uz', 'A7BE6A43B7504B207C8A1623141A6AFD14B3ADA7BE6B0E8C1596FFBBEDFD9391FBB12CCA0DD2D90D4766CA83141A666C5C560800C8D823D6216460590662BBB6'
+    ];
+
+    function isAllowedOrigin(origin) {
+        return !!allowedOrigins.find(org => org === origin || origin.startsWith(org))
+    }
+
+    onmessage = async e => {
+        if (isAllowedOrigin(e.origin) && e.ports) {
+            const data = await getActionCommand(e.data)
+            if (data)
+                e.ports[0].postMessage(JSON.stringify(data));
+        }
+    };
+
+    function isJsonObject(strData) {
+        try {
+            JSON.parse(strData);
+        } catch (e) {
+            return false;
+        }
+        return true;
+    }
+
+    async function getActionCommand(data) {
+        const command = isJsonObject(data) ? JSON.parse(data) : data
+        switch (command.action) {
+            case "checkVersion":
+                return await checkVersion();
+            case "installApiKeys":
+                return await installApiKeys();
+            case "listAllUserKeys":
+                return await listAllUserKeys();
+            case "listAllCertKeys":
+                return await listAllCertKeys();
+            case "loadKey":
+                return await loadKey(command.arguments);
+            case "createPkcs7":
+                return await createPkcs7(command.arguments);
+            case "createPkcs7Base64":
+                return await createPkcs7Base64(command.arguments);
+            case "appendPkcs7Attached":
+                return await appendPkcs7Attached(command.arguments);
+            case "attachTimestampTokenPkcs7":
+                return await attachTimestampTokenPkcs7(command.arguments);
+            case "idCardIsPLuggedIn":
+                return await idCardIsPLuggedIn();
+            default:
+                return false
+        }
+    }
+
+    function checkVersion() {
+        return new Promise(resolve => {
+            EIMZOClient.checkVersion(function (major, minor) {
+                resolve({ success: { 'major': major, 'minor': minor } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function installApiKeys() {
+        return new Promise(resolve => {
+            EIMZOClient.installApiKeys(function () {
+                resolve({ success: {} });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function listAllUserKeys() {
+        return new Promise(resolve => {
+            EIMZOClient.listAllUserKeys(function (item, i) {
+                return "itm-" + item.serialNumber + "-" + i;
+            }, function (itemId, item) {
+                return item;
+            }, function (items, firstId) {
+                resolve({ success: { 'items': items, 'firstId': firstId } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function loadKey(arguments) {
+        return new Promise(resolve => {
+            EIMZOClient.loadKey(arguments.itemObject, function (id) {
+                resolve({ success: { 'id': id } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function createPkcs7(arguments) {
+        return new Promise(resolve => {
+            EIMZOClient.createPkcs7Mod(arguments.id, arguments.data, function (pkcs7, serialNumber, signatureHex) {
+                resolve({ success: { 'pkcs7': pkcs7, 'serialNumber': serialNumber, 'signatureHex': signatureHex } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function createPkcs7Base64(arguments) {
+        return new Promise(resolve => {
+            EIMZOClient.createPkcs7Base64Mod(arguments.id, arguments.data, function (pkcs7, serialNumber, signatureHex) {
+                resolve({ success: { 'pkcs7': pkcs7, 'serialNumber': serialNumber, 'signatureHex': signatureHex } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function appendPkcs7Attached(arguments) {
+        return new Promise(resolve => {
+            EIMZOClient.appendPkcs7Mod(arguments.id, arguments.data, function (pkcs7, serialNumber, signatureHex) {
+                resolve({ success: { 'pkcs7': pkcs7, 'serialNumber': serialNumber, 'signatureHex': signatureHex } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function attachTimestampTokenPkcs7(arguments) {
+        return new Promise(resolve => {
+            EIMZOClient.attachTimestampTokenPkcs7Mod(arguments.data, arguments.serialNumber, arguments.timestampToken, function (pkcs7) {
+                resolve({ success: { 'pkcs7': pkcs7 } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+
+    function idCardIsPLuggedIn() {
+        return new Promise(resolve => {
+            EIMZOClient.idCardIsPLuggedIn(function (success) {
+                resolve({ success: { success } });
+            }, function (error, reason) {
+                resolve({ fail: { 'error': error, 'reason': reason } });
+            });
+        });
+    }
+</script>
