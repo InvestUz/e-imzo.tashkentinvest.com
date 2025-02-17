@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Fetch All Data using e-imzo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .data-block {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+
+        .data-block h2 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+
+        .data-block pre {
+            margin: 0;
+            padding: 10px;
+            background-color: #eee;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Fetch All Data using e-imzo</h1>
+        <div class="data-block" id="version-block">
+            <h2>Version</h2>
+            <pre id="version-data"></pre>
+        </div>
+        <div class="data-block" id="api-keys-block">
+            <h2>API Keys</h2>
+            <pre id="api-keys-data"></pre>
+        </div>
+        <div class="data-block" id="user-keys-block">
+            <h2>User Keys</h2>
+            <pre id="user-keys-data"></pre>
+        </div>
+        <div class="data-block" id="cert-keys-block">
+            <h2>Cert Keys</h2>
+            <pre id="cert-keys-data"></pre>
+        </div>
+    </div>
+    <script src="e-imzo.js"></script>
+    <script src="e-imzo-client.js"></script>
+    <script src="allowed-origins.js?v=0.1.3"></script>
+    <script type="text/javascript">
+        EIMZOClient.API_KEYS = [
+            'null', 'E0A205EC4E7B78BBB56AFF83A733A1BB9FD39D562E67978CC5E7D73B0951DB1954595A20672A63332535E13CC6EC1E1FC8857BB09E0855D7E76E411B6FA16E9D',
+            'localhost', '96D0C1491615C82B9A54D9989779DF825B690748224C2B04F500F370D51827CE2644D8D4A82C18184D73AB8530BB8ED537269603F61DB0D03D2104ABF789970B',
+            '127.0.0.1', 'A7BCFA5D490B351BE0754130DF03A068F855DB4333D43921125B9CF2670EF6A40370C646B90401955E1F7BC9CDBF59CE0B2C5467D820BE189C845D0B79CFC96F',
+            'hujjat.uz', 'A7BE6A43B7504B207C8A1623141A6AFD14B3ADA7BE6B0E8C1596FFBBEDFD9391FBB12CCA0DD2D90D4766CA83141A666C5C560800C8D823D6216460590662BBB6'
+        ];
+
+        async function fetchAllData() {
+            const version = await checkVersion();
+            document.getElementById('version-data').innerText = JSON.stringify(version, null, 2);
+
+            const apiKeys = await installApiKeys();
+            document.getElementById('api-keys-data').innerText = JSON.stringify(apiKeys, null, 2);
+
+            const userKeys = await listAllUserKeys();
+            document.getElementById('user-keys-data').innerText = JSON.stringify(userKeys, null, 2);
+
+
+            const certKeys = await listAllCertKeys();
+            document.getElementById('cert-keys-data').innerText = JSON.stringify(certKeys, null, 2);
+
+            // Add any additional data fetching you need here
+        }
+
+        function checkVersion() {
+            return new Promise(resolve => {
+                EIMZOClient.checkVersion(function (major, minor) {
+                    resolve({ success: { 'major': major, 'minor': minor } });
+                }, function (error, reason) {
+                    resolve({ fail: { 'error': error, 'reason': reason } });
+                });
+            });
+        }
+
+        function installApiKeys() {
+            return new Promise(resolve => {
+                EIMZOClient.installApiKeys(function () {
+                    resolve({ success: {} });
+                }, function (error, reason) {
+                    resolve({ fail: { 'error': error, 'reason': reason } });
+                });
+            });
+        }
+
+        function listAllUserKeys() {
+            return new Promise(resolve => {
+                EIMZOClient.listAllUserKeys(function (item, i) {
+                    return "itm-" + item.serialNumber + "-" + i;
+                }, function (itemId, item) {
+                    return item;
+                }, function (items, firstId) {
+                    resolve({ success: { 'items': items, 'firstId': firstId } });
+                }, function (error, reason) {
+                    resolve({ fail: { 'error': error, 'reason': reason } });
+                });
+            });
+        }
+
+        function listAllCertKeys() {
+            // Implement the function to fetch all certificate keys
+            return new Promise(resolve => {
+                // Simulating fetching certificate keys
+                setTimeout(() => {
+                    resolve({ success: { 'certKeys': [] } });
+                }, 1000);
+            });
+        }
+
+        window.onload = fetchAllData;
+    </script>
+</body>
+
+</html>
