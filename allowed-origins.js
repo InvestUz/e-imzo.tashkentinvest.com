@@ -2,6 +2,7 @@ const allowedOrigins = [
     'http://localhost',
     'http://127.0.0.1',
     'http://127.0.0.1:5500',
+    'https://948e-5-133-120-24.ngrok-free.app',
   
     'https://smart-agro.uz',
     'https://www.smart-agro.uz',
